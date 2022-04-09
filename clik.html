@@ -19,7 +19,7 @@
 </head>
 <body>
     
-   <div id="rest" >
+   <div id="rest" class="clicar">
 
    <p>Interagindo...</p> 
 
@@ -31,6 +31,11 @@
 
         //variável para pegar o id no html
         var a=window.document.getElementById('rest')
+        
+        var nome=window.document.getElementsByTagName('div')['0']
+      
+         var clc=window.document.getElementsByClassName('clicar')['0']
+        
         //Quando o curso do mouse entrar na div realizar o método entrar
         a.addEventListener('mouseenter',entrar)
         //Quando o curso sair da div executar  o método sair
@@ -58,14 +63,16 @@
         //método move
         function move(){
             
-           a.innerHTML='movendo'
+           clc.innerHTML='movendo'
+           clc.style.color='red'
 
         }
         //método clik
         function clik(){
             
             a.style.backgroundColor='yellow'
-            a.innerText='clicou'
+            nome.innerText='clicou'
+            nome.style.color='blue'
         }
         //método soltar
         function soltar(){

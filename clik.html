@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    div{
+        background-color: rgb(50, 48, 163);
+        color: white;
+        font-size: 70px;
+        margin-right: 250px;
+        padding-bottom: 39px;
+    }
+
+    </style>
+</head>
+<body>
+    
+   <div id="rest" >
+
+Interagindo...
+
+   </div>
+
+      <script>
+        
+
+
+        //variável para pegar o id no html
+        var a=window.document.getElementById('rest')
+        //Quando o curso do mouse entrar na div realizar o método entrar
+        a.addEventListener('mouseenter',entrar)
+        //Quando o curso sair da div executar  o método sair
+        a.addEventListener('mouseout',sair)
+        //Quando movimenta o curso será executado o método mov
+        a.addEventListener('mousemove',move)
+        //ao clicar aparecer o método clik
+        a.addEventListener('mousedown',clik)
+        //ao clicar que soltar realizar o método soltar   
+       a.addEventListener('mouseup',soltar)
+        // Clicar e soltar executa p método clicarEsoutar
+        a.addEventListener('click',clicarEsolta)
+        // método entrar
+        function entrar(){
+            a.innerText='Entrando'
+            a.style.color='red'
+        }
+        //método sair
+        function sair(){
+            a.innerText='Saindo'
+            a.style.color='blue'
+            a.style.backgroundColor='white'
+
+        }
+        //método move
+        function move(){
+            
+           a.innerHTML='movendo'
+
+        }
+        //método clik
+        function clik(){
+            
+            a.style.backgroundColor='yellow'
+            a.innerText='clicou'
+        }
+        //método soltar
+        function soltar(){
+            a.innerText='soltou'
+            a.style.color='white'
+        }
+        //método clicar e soltar
+        function clicarEsolta(){
+            a.innerText='clicou e soltou'
+            a.style.color='red'
+        }
+
+      </script>
+
+</body>
+</html>

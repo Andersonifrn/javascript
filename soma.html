@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    
+     Primeiro Número: 
+    <input type="number" name="txt1" class="txt1">
+    Segundo Número:
+    <input type="number" name="txt2" class="txt2" >
+   
+     <input  type="button" value="somar" onclick="somar()">
+     
+     <div id="total">Resultado</div>
+
+     <script>
+       
+         function somar(){
+         document.write("Não está realizando nada não se essa mensagem!")
+         var Primeiro=window.document.getElementByName('txt1')
+         var segundo=window.document.getElementByName('txt2')
+         var total=window.document.getElementById('total')
+      
+        var numero1=Number(Primeiro.value)
+        var numero2=Number(segundo.value)
+
+        var rst=numero1+numero2
+         
+         total.innerHTML=rst
+      
+         
+        window.document.write(" resultado é"+total.innerHTML`RESULTADO É ${rst}`)
+      
+         }
+         
+     </script>
+</body>
+</html>
